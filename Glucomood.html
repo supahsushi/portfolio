@@ -1,327 +1,311 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GlucoMood Case Study — Metabolic Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&amp;f[]=hanken-grotesk@400,500,600&amp;f[]=instrument-serif@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-primary-container": "#552300",
+                "on-tertiary-fixed": "#2a1703",
+                "secondary": "#f8bd41",
+                "on-surface-variant": "#dec1b1",
+                "surface-bright": "#44372d",
+                "on-secondary-container": "#382700",
+                "error-container": "#93000a",
+                "border-high": "#5a3d28",
+                "surface-interactive": "#311f10",
+                "on-error": "#690005",
+                "inverse-surface": "#f4ded0",
+                "on-secondary-fixed": "#271900",
+                "primary-container": "#f07820",
+                "on-surface": "#f4ded0",
+                "on-tertiary-fixed-variant": "#5b4227",
+                "surface-variant": "#3f3228",
+                "secondary-container": "#bb8800",
+                "inverse-on-surface": "#3b2e24",
+                "error": "#ffb4ab",
+                "secondary-fixed": "#ffdea5",
+                "on-tertiary-container": "#432d15",
+                "on-background": "#f4ded0",
+                "on-primary-fixed": "#321200",
+                "on-secondary": "#412d00",
+                "tertiary-fixed-dim": "#e4c09d",
+                "on-tertiary": "#422c13",
+                "tertiary-fixed": "#ffdcbc",
+                "border-low": "#4a3120",
+                "surface-primary": "#221508",
+                "outline": "#a68b7d",
+                "inverse-primary": "#9a4600",
+                "tertiary-container": "#b49474",
+                "outline-variant": "#574237",
+                "on-primary": "#532200",
+                "primary-fixed": "#ffdbc9",
+                "surface-secondary": "#2a1c0f",
+                "on-error-container": "#ffdad6",
+                "surface-container-high": "#34281e",
+                "surface-tint": "#ffb68c",
+                "surface": "#1b1109",
+                "surface-container": "#291d14",
+                "tertiary": "#e4c09d",
+                "surface-container-lowest": "#160c05",
+                "background": "#1b1109",
+                "text-muted": "#b09070",
+                "on-secondary-fixed-variant": "#5d4200",
+                "secondary-fixed-dim": "#f8bd41",
+                "primary": "#ffb68c",
+                "primary-fixed-dim": "#ffb68c",
+                "surface-container-highest": "#3f3228",
+                "text-main": "#f0e6d8",
+                "surface-dim": "#1b1109",
+                "surface-container-low": "#241911",
+                "on-primary-fixed-variant": "#753400"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "base": "4px",
+                "container-wide": "1200px",
+                "stack-md": "24px",
+                "margin-page": "clamp(2rem, 8vw, 6rem)",
+                "stack-sm": "12px",
+                "stack-lg": "48px",
+                "gutter": "24px",
+                "container-default": "960px"
+            },
+            "fontFamily": {
+                "headline-lg": ["Cabinet Grotesk"],
+                "caption-xs": ["Hanken Grotesk"],
+                "hero-display": ["Cabinet Grotesk"],
+                "body-base": ["Hanken Grotesk"],
+                "headline-lg-mobile": ["Cabinet Grotesk"],
+                "section-header": ["Cabinet Grotesk"],
+                "editorial-serif": ["Instrument Serif"],
+                "label-sm": ["Hanken Grotesk"],
+                "lead-text": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "caption-xs": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "hero-display": ["128px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "section-header": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "editorial-serif": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "lead-text": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #1b1109;
+            color: #f4ded0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #f07820, transparent);
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;&lt;html class="dark" lang="en" style=""&gt;&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="utf-8"&gt;</p>
-<p class="p1">&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"&gt;</p>
-<p class="p1">&lt;title&gt;GlucoMood Case Study — Metabolic Intelligence&lt;/title&gt;</p>
-<p class="p1">&lt;script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,400&amp;amp;f[]=hanken-grotesk@400,500,600&amp;amp;f[]=instrument-serif@400&amp;amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@100..900&amp;amp;family=Hanken+Grotesk:wght@100..900&amp;amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1">&lt;!-- Theme Configuration --&gt;</p>
-<p class="p1">&lt;script id="tailwind-config"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>tailwind.config = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>darkMode: "class",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>theme: {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>extend: {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"colors": {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-primary-container": "#552300",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-tertiary-fixed": "#2a1703",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"secondary": "#f8bd41",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-surface-variant": "#dec1b1",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-bright": "#44372d",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-secondary-container": "#382700",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"error-container": "#93000a",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"border-high": "#5a3d28",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-interactive": "#311f10",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-error": "#690005",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"inverse-surface": "#f4ded0",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-secondary-fixed": "#271900",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"primary-container": "#f07820",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-surface": "#f4ded0",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-tertiary-fixed-variant": "#5b4227",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-variant": "#3f3228",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"secondary-container": "#bb8800",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"inverse-on-surface": "#3b2e24",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"error": "#ffb4ab",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"secondary-fixed": "#ffdea5",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-tertiary-container": "#432d15",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-background": "#f4ded0",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-primary-fixed": "#321200",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-secondary": "#412d00",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"tertiary-fixed-dim": "#e4c09d",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-tertiary": "#422c13",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"tertiary-fixed": "#ffdcbc",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"border-low": "#4a3120",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-primary": "#221508",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"outline": "#a68b7d",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"inverse-primary": "#9a4600",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"tertiary-container": "#b49474",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"outline-variant": "#574237",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-primary": "#532200",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"primary-fixed": "#ffdbc9",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-secondary": "#2a1c0f",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-error-container": "#ffdad6",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-container-high": "#34281e",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-tint": "#ffb68c",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface": "#1b1109",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-container": "#291d14",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"tertiary": "#e4c09d",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-container-lowest": "#160c05",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"background": "#1b1109",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"text-muted": "#b09070",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-secondary-fixed-variant": "#5d4200",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"secondary-fixed-dim": "#f8bd41",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"primary": "#ffb68c",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"primary-fixed-dim": "#ffb68c",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-container-highest": "#3f3228",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"text-main": "#f0e6d8",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-dim": "#1b1109",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"surface-container-low": "#241911",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"on-primary-fixed-variant": "#753400"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"borderRadius": {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"DEFAULT": "0.25rem",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"lg": "0.5rem",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"xl": "0.75rem",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"full": "9999px"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"spacing": {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"base": "4px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"container-wide": "1200px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"stack-md": "24px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"margin-page": "clamp(2rem, 8vw, 6rem)",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"stack-sm": "12px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"stack-lg": "48px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"gutter": "24px",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"container-default": "960px"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"fontFamily": {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"headline-lg": ["Cabinet Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"caption-xs": ["Hanken Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"hero-display": ["Cabinet Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"body-base": ["Hanken Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"headline-lg-mobile": ["Cabinet Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"section-header": ["Cabinet Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"editorial-serif": ["Instrument Serif"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"label-sm": ["Hanken Grotesk"],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"lead-text": ["Hanken Grotesk"]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>"fontSize": {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"headline-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"caption-xs": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"hero-display": ["128px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"section-header": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"editorial-serif": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],</p>
-<p class="p1"><span class="Apple-converted-space">                </span>"lead-text": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">          </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1b1109;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #f4ded0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>-webkit-font-smoothing: antialiased;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.grain-overlay {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 9999;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.03;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-image: url("https://www.transparenttextures.com/patterns/stardust.png");</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.bento-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(12, 1fr);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 24px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.material-symbols-outlined {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.timeline-line {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 2px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to bottom, #f07820, transparent);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="font-body-base text-body-base"&gt;</p>
-<p class="p1">&lt;div class="grain-overlay"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;!-- TopNavBar --&gt;</p>
-<p class="p1">&lt;nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-page py-4 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-low dark:border-low"&gt;</p>
-<p class="p1">&lt;a href="/" class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-background dark:text-on-background hover:text-primary transition-colors"&gt;GlucoMood&lt;/a&gt;</p>
-<p class="p1">&lt;div class="hidden md:flex gap-8 items-center"&gt;</p>
-<p class="p1">&lt;a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#"&gt;Work&lt;/a&gt;</p>
-<p class="p1">&lt;a class="font-label-sm text-label-sm uppercase tracking-wider text-primary dark:text-primary font-bold border-b border-primary pb-1" href="#"&gt;About&lt;/a&gt;</p>
-<p class="p1">&lt;a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#"&gt;Lab&lt;/a&gt;</p>
-<p class="p1">&lt;a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#"&gt;Archive&lt;/a&gt;</p>
-<p class="p1">&lt;a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#"&gt;Contact&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2 rounded-full hover:opacity-80 transition-opacity"&gt;Get in Touch&lt;/button&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p1">&lt;main class="pt-32 pb-stack-lg"&gt;</p>
-<p class="p1">&lt;!-- Hero Header --&gt;</p>
-<p class="p1">&lt;header class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100"&gt;</p>
-<p class="p1">&lt;div class="flex flex-col md:flex-row items-baseline gap-6 mb-4"&gt;</p>
-<p class="p1">&lt;h1 class="font-headline-lg text-headline-lg md:text-hero-display text-on-background"&gt;GlucoMood&lt;/h1&gt;</p>
-<p class="p1">&lt;img alt="GlucoMood App Icon" class="w-24 h-24 md:w-32 md:h-32 rounded-[22%] shadow-2xl border border-low" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn2x2uY9q167lzdmQ_K_cj_LA5FPgxPOWlQF0uTIG3jZlA0CZfpHEQCkLVsiNz-K4LV7LfczTJ2n2DFg_zUbOrfPELo5LzE_Q61zjrHh4IzR88X1iv91Zda7SHx9TV-V-h1K26Y-x7zQ4nIMalXC7SRxUpW-LjI3JL0wOqlzAAsI2pLL6-Dz3Bu_8JqCyz5io9JMDE41I5OMnFhLl9l_j8J1FlpJnNn2SpoOaLvhthSdlWbVZizHsSehpjoJPamihPMpMGN0bNvVs"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;p class="font-editorial-serif text-editorial-serif text-secondary max-w-2xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Health tracking reimagined, connecting your glucose and your emotions.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p1">&lt;!-- GlucoMood Timeline Section --&gt;</p>
-<p class="p1">&lt;section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100"&gt;</p>
-<p class="p1">&lt;h2 class="font-section-header text-center text-on-background mb-stack-lg uppercase tracking-widest"&gt;GLUCOMOOD TIMELINE&lt;/h2&gt;</p>
-<p class="p1">&lt;div class="max-w-4xl mx-auto relative pl-12 space-y-16"&gt;</p>
-<p class="p1">&lt;div class="timeline-line"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 1 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;1&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;The Problem with Dexcom&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;GlucoMood started from my own experience wearing a Dexcom and living with the reality of checking glucose data regularly. I kept thinking that something so tied to how you feel physically and emotionally should not have to look so plain, clinical, and disconnected from real life.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 2 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;2&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;Humanizing the Data&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;A lot of health apps feel like they only care about showing numbers, but not the person behind those numbers. As someone with ADHD, I knew I wanted something that felt more visually engaging, more alive, and easier to emotionally connect with, because design really affects whether something feels supportive or draining.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 3 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;3&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;The Mood Connection&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;That is where the idea for GlucoMood came from: a glucose-tracking app that feels more vibrant, mood-aware, and human. I wanted to build something that still respected the seriousness of health data, but did it in a way that felt more personal and expressive instead of cold and sterile.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 4 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;4&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;A New Visual Language&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;From the beginning, my goal was not just to make a prettier Dexcom-style app. I wanted to create a space where glucose data, mood, energy, and day-to-day patterns could feel more connected, so the experience made more sense as part of someone’s actual life.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 5 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;5&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;Emotive States&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;This project feels personal because it comes from something I actually wear on my body and think about in real life, not just a random app idea. I wanted to design from that place of lived experience, where the product feels like it understands the emotional side of tracking health too.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 6 (AI Layer) --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;6&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid md:grid-cols-2 gap-8 items-center"&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;Mimi: The AI Companion&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;One of the biggest future parts of GlucoMood is the AI assistant. My vision is for it to help users during high or low sugar moments, especially after hours when someone might be overwhelmed, scared, or unsure what to do next, while being very clear that it is there for support and guidance, not to replace a doctor or medical care.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;img alt="Mimi AI screen" class="rounded-xl border border-low shadow-2xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXUeqGLAVv1YOH8qjVx8TV49HRWEqgyD_DnZb9vVblaBnkUpEBikkWBCGS9DCkx3VcXkkr3aF-_IyH7j6rPwxi45jY67Cz2CYePI4GYdkB2mFFm7edJkdWJTRmqJS9Mpp1Gfd6MQvt1z3IeVeSZVBibHj3kd-yuw9L4yIyjtu9EdWI9CwIPF_0iWps-xXSpvtHsN4tTQoWcj3VOdlC_M1a6tGVR6vYhC1B_jg4t9GaO8X03KNF0uzSbTwn608bZEOH1xZNuC1m4d4"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 7 --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;7&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;Metabolic Intelligence&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;I want the AI assistant to feel calm, practical, and compassionate. Instead of acting like it knows everything, it would help users think through what may be happening, offer commonly helpful next steps, and encourage them to seek medical attention when needed.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Step 8 (Bigger Vision) --&gt;</p>
-<p class="p1">&lt;div class="relative"&gt;</p>
-<p class="p1">&lt;div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20"&gt;8&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid md:grid-cols-2 gap-8 items-center"&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h3 class="font-section-header text-2xl text-on-background mb-3"&gt;The Bigger Vision&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-secondary opacity-90"&gt;Long term, I want GlucoMood to become more than just a phone app. One of the future features I care about most is bringing it to Apple Watch, because glucose tracking often happens in quick moments, and I think having that kind of support right on the wrist could make the experience feel even more immediate and useful.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;img alt="Dexcom Apple Watch visual" class="rounded-xl border border-low shadow-2xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxtCHAIN7O39CzEz1onWn1M6r0KTCmRVwsFj67kVmHEMNyAG6NKbEz2VUmzeV7U_X9H6DQovgBQZWdSXfPIAMmfYGTrxP2CiFBypdtUlbCLQzDl20qxqJADzL8qFO-wm-g-EoD96lN6b6vA2UgMIIOyiABwyug-fk_wgP0FLC6Ue_NfPQlKzcYzBk-W6Qde052WBNQ5Txkd3oDXFrHZo35WusMabdgC_IROIAiLsCJcBx-LEYM0AU30RbrKI2CogtRsWhFqY22vio"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;!-- Vision Section / Accomplishment --&gt;</p>
-<p class="p1">&lt;section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100"&gt;</p>
-<p class="p1">&lt;div class="max-w-4xl mx-auto mb-stack-lg"&gt;</p>
-<p class="p1">&lt;h2 class="font-section-header text-section-header text-on-background mb-4"&gt;What I’m trying to accomplish&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="font-lead-text text-lead-text text-secondary"&gt;At its core, GlucoMood is my attempt to make health tracking feel less cold and intimidating, and more human, supportive, and emotionally aware. I want it to be something that helps people understand their glucose in a way that feels more personal, especially for users like me who need an experience that is not only functional, but actually feels good to use.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-4"&gt;</p>
-<p class="p1">&lt;img alt="Low state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqEKFbZpbF_VSSUnYDH8cRfRwaQgnXQ7lHckj5qBfxOhF0_oGv9rrQUOKYBiv7RVRGAHwQWAiHNEQFUwczmkArxH89TO020GB7GbrAubih8j1VLTBABlJChSV9Ls2kJMhQQ-PSHZjXi1aUyuzXtcQTYy9w5pfrKkbYLs4Lr-9d46Kgh2IGpGlVsf0pzdVN5dEG8DmW3m3LVjZDdqNfZoGcmckoHvw4PjfSFPZZ6oU1llxZuHYLM47Y838euiVyO0H3hbxIQWK1ZI"&gt;</p>
-<p class="p1">&lt;img alt="Normal state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKLITD-RS696p4P9SWDVMLM24oML-zhnciZPS2IckQDAk0kw6B51KUfw4804lD4YNKd_72NkhLJUdA2bKCVpGPWi6iKiBX69IQvrNZsipuOfQMwZOCtnSy3GpPhb9ryy8qyUfIY1sWyv7qVY_BJxFvJaf3Gs5GRFQQhJePXlH29oslXYU_6xmN9fWdh3-fbnlfv-wI906nWdVYCkYjmCe9aM3vurAQ2wYtR7PwlHqoLNuNRAEs3Q2RESM2dnu-R3Sf6FhibJscqU"&gt;</p>
-<p class="p1">&lt;img alt="High state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn-p68KBhkBKjymkOukZWL_orjJ8_KBzqzTc_3ftT41KvkAtGthEk74Ie3TXOyHiSyWAlPmGgHktYNnQ5hKtvRmhuIxj6uqzjiqsBt1wknfBpTFLi3kfx5CHkOqJVyH7aH_cFqy25A0yYF3pkhDWvFcya7thhUO-xWq9B-IhIQ7kptkuEQn618tbGyvRc9oxzVM5RLkTfk5e2iTTFERPu_Lf31Yd4hyDFt_3FV5VwekRmA3Oy5QqfwZJzEZiPBz-rEHb2caAmEPUM"&gt;</p>
-<p class="p1">&lt;img alt="Caution state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Sb7ynUo5AtBGPE8eRKOoUY7ne14RzLvePBPXsqvVjLfe6-iFkq3dix0ewDelEefYBRMxPOwLyDFgiXTpaYaZTBLlrJ-T9koLxwBQVU2t7lLLFuuXLjdxj3tlHxr9vTVam9XgGa5K6YBvVva7tdjwFVdUd4zPhhd_RW6MQJdfcEIhhKDF3URgrYXzAyh8Lqgf5CSLA2_XjmNhSqBeB4sCO1uwt3-I7QuT3XJ9Ieh8hABZbAehWZ8otsnVN-43sdsTaJ1Z_yxmeKk"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;!-- Atmospheric Image Section --&gt;</p>
-<p class="p1">&lt;section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100"&gt;</p>
-<p class="p1">&lt;div class="w-full h-[40vh] rounded-xl overflow-hidden relative border border-low group"&gt;</p>
-<p class="p1">&lt;div class="absolute inset-0 bg-gradient-to-t from-surface-primary to-transparent z-10"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&amp;amp;fit=crop&amp;amp;q=80')] bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-[2s]"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p1">&lt;!-- Footer --&gt;</p>
-<p class="p1">&lt;footer class="w-full py-stack-lg px-margin-page flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-primary border-t border-low"&gt;</p>
-<p class="p1">&lt;div class="flex flex-col gap-2"&gt;</p>
-<p class="p1">&lt;div class="font-headline-lg text-headline-lg text-on-surface scale-75 origin-left"&gt;GlucoMood&lt;/div&gt;</p>
-<p class="p1">&lt;p class="font-body-base text-body-base text-secondary opacity-80"&gt;© 2026 JenB. Crafted with precision for metabolic health.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex gap-8"&gt;</p>
-<p class="p1">&lt;a class="font-body-base text-body-base text-text-muted hover:text-on-surface transition-all duration-300 hover:translate-y-[-2px]" href="#"&gt;LinkedIn&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1">&lt;a class="font-body-base text-body-base text-text-muted hover:text-on-surface transition-all duration-300 hover:translate-y-[-2px]" href="#"&gt;GitHub&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Intersection Observer for fade-in effects</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const observerOptions = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>threshold: 0.1</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const observer = new IntersectionObserver((entries) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>entries.forEach(entry =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (entry.isIntersecting) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>entry.target.classList.add('opacity-100');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>entry.target.classList.remove('translate-y-4', 'opacity-0');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, observerOptions);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('section, header').forEach(el =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>el.classList.add('transition-all', 'duration-1000', 'translate-y-4', 'opacity-0');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>observer.observe(el);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;&lt;/html&gt;</p>
-</body>
-</html>
+<body class="font-body-base text-body-base">
+<div class="grain-overlay"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-page py-4 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-low dark:border-low">
+<a href="/" class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-background dark:text-on-background hover:text-primary transition-colors">GlucoMood</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Work</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary dark:text-primary font-bold border-b border-primary pb-1" href="#">About</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Lab</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Archive</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-2 rounded-full hover:opacity-80 transition-opacity">Get in Touch</button>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Header -->
+<header class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100">
+<div class="flex flex-col md:flex-row items-baseline gap-6 mb-4">
+<h1 class="font-headline-lg text-headline-lg md:text-hero-display text-on-background">GlucoMood</h1>
+<img alt="GlucoMood App Icon" class="w-24 h-24 md:w-32 md:h-32 rounded-[22%] shadow-2xl border border-low" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn2x2uY9q167lzdmQ_K_cj_LA5FPgxPOWlQF0uTIG3jZlA0CZfpHEQCkLVsiNz-K4LV7LfczTJ2n2DFg_zUbOrfPELo5LzE_Q61zjrHh4IzR88X1iv91Zda7SHx9TV-V-h1K26Y-x7zQ4nIMalXC7SRxUpW-LjI3JL0wOqlzAAsI2pLL6-Dz3Bu_8JqCyz5io9JMDE41I5OMnFhLl9l_j8J1FlpJnNn2SpoOaLvhthSdlWbVZizHsSehpjoJPamihPMpMGN0bNvVs">
+</div>
+<p class="font-editorial-serif text-editorial-serif text-secondary max-w-2xl">
+            Health tracking reimagined, connecting your glucose and your emotions.
+        </p>
+</header>
+<!-- GlucoMood Timeline Section -->
+<section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100">
+<h2 class="font-section-header text-center text-on-background mb-stack-lg uppercase tracking-widest">GLUCOMOOD TIMELINE</h2>
+<div class="max-w-4xl mx-auto relative pl-12 space-y-16">
+<div class="timeline-line"></div>
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">1</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">The Problem with Dexcom</h3>
+<p class="font-lead-text text-secondary opacity-90">GlucoMood started from my own experience wearing a Dexcom and living with the reality of checking glucose data regularly. I kept thinking that something so tied to how you feel physically and emotionally should not have to look so plain, clinical, and disconnected from real life.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">2</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">Humanizing the Data</h3>
+<p class="font-lead-text text-secondary opacity-90">A lot of health apps feel like they only care about showing numbers, but not the person behind those numbers. As someone with ADHD, I knew I wanted something that felt more visually engaging, more alive, and easier to emotionally connect with, because design really affects whether something feels supportive or draining.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">3</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">The Mood Connection</h3>
+<p class="font-lead-text text-secondary opacity-90">That is where the idea for GlucoMood came from: a glucose-tracking app that feels more vibrant, mood-aware, and human. I wanted to build something that still respected the seriousness of health data, but did it in a way that felt more personal and expressive instead of cold and sterile.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">4</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">A New Visual Language</h3>
+<p class="font-lead-text text-secondary opacity-90">From the beginning, my goal was not just to make a prettier Dexcom-style app. I wanted to create a space where glucose data, mood, energy, and day-to-day patterns could feel more connected, so the experience made more sense as part of someone’s actual life.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">5</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">Emotive States</h3>
+<p class="font-lead-text text-secondary opacity-90">This project feels personal because it comes from something I actually wear on my body and think about in real life, not just a random app idea. I wanted to design from that place of lived experience, where the product feels like it understands the emotional side of tracking health too.</p>
+</div>
+</div>
+<!-- Step 6 (AI Layer) -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">6</div>
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">Mimi: The AI Companion</h3>
+<p class="font-lead-text text-secondary opacity-90">One of the biggest future parts of GlucoMood is the AI assistant. My vision is for it to help users during high or low sugar moments, especially after hours when someone might be overwhelmed, scared, or unsure what to do next, while being very clear that it is there for support and guidance, not to replace a doctor or medical care.</p>
+</div>
+<img alt="Mimi AI screen" class="rounded-xl border border-low shadow-2xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXUeqGLAVv1YOH8qjVx8TV49HRWEqgyD_DnZb9vVblaBnkUpEBikkWBCGS9DCkx3VcXkkr3aF-_IyH7j6rPwxi45jY67Cz2CYePI4GYdkB2mFFm7edJkdWJTRmqJS9Mpp1Gfd6MQvt1z3IeVeSZVBibHj3kd-yuw9L4yIyjtu9EdWI9CwIPF_0iWps-xXSpvtHsN4tTQoWcj3VOdlC_M1a6tGVR6vYhC1B_jg4t9GaO8X03KNF0uzSbTwn608bZEOH1xZNuC1m4d4">
+</div>
+</div>
+<!-- Step 7 -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">7</div>
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">Metabolic Intelligence</h3>
+<p class="font-lead-text text-secondary opacity-90">I want the AI assistant to feel calm, practical, and compassionate. Instead of acting like it knows everything, it would help users think through what may be happening, offer commonly helpful next steps, and encourage them to seek medical attention when needed.</p>
+</div>
+</div>
+<!-- Step 8 (Bigger Vision) -->
+<div class="relative">
+<div class="absolute -left-[52px] w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-primary/20">8</div>
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="font-section-header text-2xl text-on-background mb-3">The Bigger Vision</h3>
+<p class="font-lead-text text-secondary opacity-90">Long term, I want GlucoMood to become more than just a phone app. One of the future features I care about most is bringing it to Apple Watch, because glucose tracking often happens in quick moments, and I think having that kind of support right on the wrist could make the experience feel even more immediate and useful.</p>
+</div>
+<img alt="Dexcom Apple Watch visual" class="rounded-xl border border-low shadow-2xl max-w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxtCHAIN7O39CzEz1onWn1M6r0KTCmRVwsFj67kVmHEMNyAG6NKbEz2VUmzeV7U_X9H6DQovgBQZWdSXfPIAMmfYGTrxP2CiFBypdtUlbCLQzDl20qxqJADzL8qFO-wm-g-EoD96lN6b6vA2UgMIIOyiABwyug-fk_wgP0FLC6Ue_NfPQlKzcYzBk-W6Qde052WBNQ5Txkd3oDXFrHZo35WusMabdgC_IROIAiLsCJcBx-LEYM0AU30RbrKI2CogtRsWhFqY22vio">
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section / Accomplishment -->
+<section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100">
+<div class="max-w-4xl mx-auto mb-stack-lg">
+<h2 class="font-section-header text-section-header text-on-background mb-4">What I’m trying to accomplish</h2>
+<p class="font-lead-text text-lead-text text-secondary">At its core, GlucoMood is my attempt to make health tracking feel less cold and intimidating, and more human, supportive, and emotionally aware. I want it to be something that helps people understand their glucose in a way that feels more personal, especially for users like me who need an experience that is not only functional, but actually feels good to use.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<img alt="Low state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqEKFbZpbF_VSSUnYDH8cRfRwaQgnXQ7lHckj5qBfxOhF0_oGv9rrQUOKYBiv7RVRGAHwQWAiHNEQFUwczmkArxH89TO020GB7GbrAubih8j1VLTBABlJChSV9Ls2kJMhQQ-PSHZjXi1aUyuzXtcQTYy9w5pfrKkbYLs4Lr-9d46Kgh2IGpGlVsf0pzdVN5dEG8DmW3m3LVjZDdqNfZoGcmckoHvw4PjfSFPZZ6oU1llxZuHYLM47Y838euiVyO0H3hbxIQWK1ZI">
+<img alt="Normal state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnKLITD-RS696p4P9SWDVMLM24oML-zhnciZPS2IckQDAk0kw6B51KUfw4804lD4YNKd_72NkhLJUdA2bKCVpGPWi6iKiBX69IQvrNZsipuOfQMwZOCtnSy3GpPhb9ryy8qyUfIY1sWyv7qVY_BJxFvJaf3Gs5GRFQQhJePXlH29oslXYU_6xmN9fWdh3-fbnlfv-wI906nWdVYCkYjmCe9aM3vurAQ2wYtR7PwlHqoLNuNRAEs3Q2RESM2dnu-R3Sf6FhibJscqU">
+<img alt="High state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn-p68KBhkBKjymkOukZWL_orjJ8_KBzqzTc_3ftT41KvkAtGthEk74Ie3TXOyHiSyWAlPmGgHktYNnQ5hKtvRmhuIxj6uqzjiqsBt1wknfBpTFLi3kfx5CHkOqJVyH7aH_cFqy25A0yYF3pkhDWvFcya7thhUO-xWq9B-IhIQ7kptkuEQn618tbGyvRc9oxzVM5RLkTfk5e2iTTFERPu_Lf31Yd4hyDFt_3FV5VwekRmA3Oy5QqfwZJzEZiPBz-rEHb2caAmEPUM">
+<img alt="Caution state" class="w-full rounded-xl border border-low shadow-xl transition-transform hover:scale-[1.02] duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Sb7ynUo5AtBGPE8eRKOoUY7ne14RzLvePBPXsqvVjLfe6-iFkq3dix0ewDelEefYBRMxPOwLyDFgiXTpaYaZTBLlrJ-T9koLxwBQVU2t7lLLFuuXLjdxj3tlHxr9vTVam9XgGa5K6YBvVva7tdjwFVdUd4zPhhd_RW6MQJdfcEIhhKDF3URgrYXzAyh8Lqgf5CSLA2_XjmNhSqBeB4sCO1uwt3-I7QuT3XJ9Ieh8hABZbAehWZ8otsnVN-43sdsTaJ1Z_yxmeKk">
+</div>
+</section>
+<!-- Atmospheric Image Section -->
+<section class="px-margin-page mb-stack-lg transition-all duration-1000 opacity-100">
+<div class="w-full h-[40vh] rounded-xl overflow-hidden relative border border-low group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-primary to-transparent z-10"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&amp;fit=crop&amp;q=80')] bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-[2s]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-page flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-primary border-t border-low">
+<div class="flex flex-col gap-2">
+<div class="font-headline-lg text-headline-lg text-on-surface scale-75 origin-left">GlucoMood</div>
+<p class="font-body-base text-body-base text-secondary opacity-80">© 2026 JenB. Crafted with precision for metabolic health.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-base text-body-base text-text-muted hover:text-on-surface transition-all duration-300 hover:translate-y-[-2px]" href="#">LinkedIn</a>
+
+
+<a class="font-body-base text-body-base text-text-muted hover:text-on-surface transition-all duration-300 hover:translate-y-[-2px]" href="#">GitHub</a>
+</div>
+</footer>
+<script>
+    // Intersection Observer for fade-in effects
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('translate-y-4', 'opacity-0');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section, header').forEach(el => {
+        el.classList.add('transition-all', 'duration-1000', 'translate-y-4', 'opacity-0');
+        observer.observe(el);
+    });
+</script>
+
+
+
+
+
+
+</body></html>
