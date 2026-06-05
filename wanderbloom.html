@@ -1,0 +1,321 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Case Study: WanderBloom — Behind the Scenes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Hanken+Grotesk:wght@300;400;500;600;700;800&amp;family=Cabinet+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#241911",
+                        "surface-variant": "#3f3228",
+                        "inverse-on-surface": "#3b2e24",
+                        "tertiary-fixed": "#ffdcbc",
+                        "surface-dim": "#1b1109",
+                        "surface-primary": "#221508",
+                        "secondary-container": "#bb8800",
+                        "outline-variant": "#574237",
+                        "surface-tint": "#ffb68c",
+                        "surface-bright": "#44372d",
+                        "on-secondary-container": "#382700",
+                        "primary-container": "#f07820",
+                        "secondary-fixed": "#ffdea5",
+                        "on-tertiary-container": "#432d15",
+                        "tertiary-fixed-dim": "#e4c09d",
+                        "surface-container": "#291d14",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#321200",
+                        "surface-container-lowest": "#160c05",
+                        "surface-container-high": "#34281e",
+                        "on-surface-variant": "#dec1b1",
+                        "on-tertiary-fixed": "#2a1703",
+                        "on-background": "#f4ded0",
+                        "on-tertiary-fixed-variant": "#5b4227",
+                        "inverse-surface": "#f4ded0",
+                        "outline": "#a68b7d",
+                        "surface-secondary": "#2a1c0f",
+                        "surface": "#1b1109",
+                        "on-secondary-fixed-variant": "#5d4200",
+                        "secondary-fixed-dim": "#f8bd41",
+                        "tertiary-container": "#b49474",
+                        "on-surface": "#f4ded0",
+                        "error-container": "#93000a",
+                        "tertiary": "#e4c09d",
+                        "text-main": "#f0e6d8",
+                        "secondary": "#f8bd41",
+                        "on-secondary": "#412d00",
+                        "surface-container-highest": "#3f3228",
+                        "primary-fixed-dim": "#ffb68c",
+                        "on-primary-container": "#552300",
+                        "border-low": "#4a3120",
+                        "border-high": "#5a3d28",
+                        "primary-fixed": "#ffdbc9",
+                        "text-muted": "#b09070",
+                        "on-primary": "#532200",
+                        "primary": "#ffb68c",
+                        "on-secondary-fixed": "#271900",
+                        "on-primary-fixed-variant": "#753400",
+                        "surface-interactive": "#311f10",
+                        "background": "#1b1109",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#9a4600",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#422c13"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-page": "clamp(2rem, 8vw, 6rem)",
+                        "stack-sm": "12px",
+                        "container-default": "960px",
+                        "container-wide": "1200px",
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "lead-text": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "section-header": ["Cabinet Grotesk"],
+                        "caption-xs": ["Hanken Grotesk"],
+                        "editorial-serif": ["Instrument Serif"],
+                        "headline-lg": ["Cabinet Grotesk"],
+                        "headline-lg-mobile": ["Cabinet Grotesk"],
+                        "hero-display": ["Cabinet Grotesk"],
+                        "body-base": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "lead-text": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "section-header": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption-xs": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "editorial-serif": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "headline-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "hero-display": ["128px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #1b1109;
+            color: #f4ded0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 182, 140, 0.3);
+        }
+    </style>
+</head>
+<body class="font-body-base">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-border-low flex justify-between items-center h-16 px-margin-page">
+<a href="/" class="font-section-header text-body-base font-bold text-on-surface hover:text-primary transition-colors">Jennifer Bentulan</a>
+<div class="hidden md:flex gap-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold border-b-2 border-primary pb-1" href="#">Work</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Lab</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="#">Archive</a>
+</div>
+<button class="bg-primary text-on-primary font-label-sm px-6 py-2 rounded-full hover:scale-105 transition-transform">Contact</button>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Section -->
+<section class="max-w-container-default mx-auto px-margin-page mb-stack-lg">
+<div class="flex flex-col md:flex-row items-center gap-stack-md mb-8">
+<img alt="WanderBloom App Icon" class="w-24 h-24 rounded-3xl shadow-xl border border-border-low" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDC4dB4yE9oR_f0RHFeF98lh1SOdm74doXHe2cnz--MSvyQuzn7UcSpdGJGHzZwzAdovsQLdTfRlSksFYOthAgDtoDhDKIO2kWWRwLuUGf0CzefbO6sPGE57PBILtownoK21-Ed8PIi-CHkl8IIn5977K-PpWlvNzSKGsxA2izL0XrbQItN4BjGhIx1j6mzN-HYD1PR_hpI2gHklKjYlluJVFK4M0BKj2PNn5k-luHDgsg8ddxFOitFxUiR01V41OxYBQ03Zacz9s">
+<div class="text-center md:text-left">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight">
+                        WanderBloom: AI Travel Companion
+                    </h1>
+</div>
+</div>
+<p class="font-editorial-serif text-editorial-serif text-secondary italic mb-stack-lg leading-relaxed">
+                Build differently by a neurodivergent dev for neurodivergent people.
+            </p>
+</section>
+<!-- The Vision -->
+<section class="max-w-container-default mx-auto px-margin-page mb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-4">The Vision</span>
+<h2 class="font-section-header text-section-header text-on-surface mb-6">Redefining Exploration.</h2>
+</div>
+<div class="md:col-span-8">
+<p class="font-lead-text text-lead-text text-on-surface-variant mb-6">
+                        Travel can be overwhelming, especially when cognitive load becomes a barrier to spontaneity. WanderBloom was born from the desire to create a travel assistant that doesn't just list attractions, but understands the individual. 
+                    </p>
+<p class="font-body-base text-body-base text-on-surface-variant">
+                        By integrating sophisticated AI personalization with real-time environmental data, the app acts as a digital concierge. It checks the local weather and cross-references it with your personal style to suggest the perfect outfit, ensuring you're comfortable and confident wherever your journey takes you. It’s about removing the friction of planning, allowing the joy of discovery to take center stage.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Craftsmanship Timeline -->
+<section class="max-w-container-default mx-auto px-margin-page mb-stack-lg space-y-stack-lg">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-12">Craftsmanship Timeline</span>
+<!-- PHASE 01 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 01: CONCEPT &amp; ARCHITECTURE</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">With WanderBloom, I wanted to make travel planning feel lighter, prettier, and less stressful. My goal was to build an app that still handled the practical side of travel, like weather, packing, places, and trip timelines, but in a way that felt calm, supportive, and more human. I designed it with an ADHD-friendly mindset and planned the architecture so it could grow into a richer premium experience over time.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<img alt="WanderBloom UI Mockup 1" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVPUCiJcVfUoh2rrcmT2_1mM1hm7rJjL0xmlElPF96cHULRkNuncwoCQTZnCZDpb-5tuTH843lO_5qTw96ve8VjCNPApolMLQlab1N2tiJoUs9iBy8HPI-79wG2FluS_zy8ZY1CnrINyLTzdyTpRiXqvDVk76CMDeNlRlYzHXDbTEgzbsMQtce_oYaQnRMnDkk3pz0yUamE6WxePREPt2T2tWQVpbFTot_3P2xT8kSN-KQ3eTygaQxAvFa4j_fq-zG2BVKibJ76Tw">
+<img alt="WanderBloom UI Mockup 2" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB4I6ErCgH8Ono0mwFz67vvBsPOQfYi2qs1A1ea7q20kJu8dUbJ-mx96NwZiNAmCysO9U3cB1BpeLsKqbhS5YopXK0Iif0CGKvzwihQEL6GQWssCsKgx6cSiN9rENzHRrHbW-XNxZxZgtidJ5CIu6ZpmPqFXoC4Lh9WokYM_SXBNUOaXSrAzN4qgbPyoK7ccpMDDo-dc3iKAKaDreonXkcQn3PHG5PuFFgTN2mzf4NmdWgPHmX5rNiDXqc1MzyGMRrh8HZIQil8J0">
+<img alt="WanderBloom UI Mockup 3" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4rxUdMp4Fgzo_2zj-JVpi9YBAclv1M5PwTQXEmBab0lkCvQdFRK4vQ9HTG-0ZvQFVmgE1ojKpGdSS6NT1Mu6wtFDtE36arEwC4MOYxXxlcfT-j6NYaJpFIxCMaBx64KeT-mkB0Skthr8Iga7mkwn_c11VBl8RHQJz7oJ25umW3v2k2ElNtQ_4UyjgPs-aspCwF3tXX1C4VsWmB6i7GrKqIjCr3hg4wEW6NHoHtZ5GxTxpny6Y289IJilWqrqjeHOcLR_WfRFMdAs">
+</div>
+</div>
+</div>
+<!-- PHASE 02 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 02: WEATHER API INTEGRATION</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">Pick a destination, say the Philippines: and the app shows you real-time weather, air quality, and pollen levels so you know exactly what to pack. It handles unit conversations automatically too (Celsius for international, Farenheit for the US). No more arriving somewhere and realizing you packed all wrong. It's the practical friend who actually thinks ahead for you.&nbsp;</p>
+<div class="max-w-md">
+<img alt="WanderBloom Weather UI" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuoK69FS-vfiSNLvOuAMJf_hbUHF9H3PGjTidyMGFm6IlSrfzB8InmIVDYXciU6com6RSlZ6JpT-h5P3pxjo5QnYW_8Q78I9nVPwViucCZ_-uM6FF1z4KFj7pIDthx3AAhi1A3dRELkDWYasOpmzkET9_i_i9Gs0kOWtMAlOdeIw25AWb_AzhhaOBwkPGYvWdstOMLw03GSzKJoB7N2d_L7QOyDw3wkCqkee8B5BWovX2anLGOylg8ZLpzTL7R-ovKtK_oKPb0Bfg">
+</div>
+</div>
+</div>
+<!-- PHASE 03 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 03: PLAN AHEAD</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">Planning ahead should be effortless. Whether you've just landed and want to find a low-energy spot to chill or you're looking for the perfect dinner location near your hotel, WanderBloom helps you curate your itinerary based on your current vibe.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<img alt="WanderBloom Vibe Selection" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7SKrJWUG0tWjwhNvyJOAFVUcckqofzhuoidzK4pqjZmF2zGjFJwFDbbiwbl4GWLk2YVaF6m2hKKJGskeRLFo6WXT0vNa6_UaULNwaf7jT8mqmwpzKOKj3BWUPhZeaslr_sbv07pyQg3DZIUUYEou6WCokzzE1-TmOhRBIPWVEoNRjwn6vnlVSIv0PRLvobWrJr94eEjSd7Hq9rlf1vAPZ7_6RowLCYAPtwMd7xodUBWFAHdUZ57j8Qg3z_9mBuFbO7y9wtg8NA1I">
+<img alt="WanderBloom Place Types" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoEdHwfNs6mdUE6_x_cawH0io6ZQEd-W7RnDj48DRlvOB0-j1zd88mup92R-boT57GK-nxbGCd8rpu8gf1GmHfoen8sPyYNrfzVuXfA0y8mn-s0x3Fqwqr0ELo2IhJgIntsYlUjrrkiY4jvKLMaAqcVyPvz6CsEWMzp1z5sNnDNefrQvgQklMLNNgk6snE_mZKR5rYETpNdAX6HfdQK4Yn8Tf9mVOB2DikBtCsnDM0rIh9Zc7xdjbkKKrVFwsr4GVtOj417u1V09s">
+<img alt="WanderBloom Vibe Detail" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjL-0e0vYd69EZ-pKaRmOBbZiPosfZ397wRRZnIanOuHIQcAFKZm9R0eu6j1E1Y6kl5FVnMD-ZcbZomhJCe_yruf3VatUlgnxgFD8V9SPyCi9Uw4cfMmckg2X7R5wl1DuH-uOwBcWnzsfoA912xqOq7632Vcsb-dDvfgSwHE5XqokuwmjGSmhS877ux0giV8KPpoYFE84CGJFrkp2TVRD8Pu0PaFwnAqh45dPpZtPnHcf6_rMbpIxPxscPd-pDFOgIK0N_nuzV0N8">
+<img alt="WanderBloom Nearby Places" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqbxHjM6IUyjhxKhupWw58N76_7KvPXagwo_zuRf6_EeG-bZRd0VDiz-CrUfg8g_kj7bAiOntgLTe8mnCO9ZqzxTDWAJCY0WdVXJC8n-fSuqjzcFL3nqc1hS-IpR4tMzMK8I4eHc3x5n_5OaDRX9Tf-_bjlbKJwNCF3SxW8cRvLt6ziFGH0uJ_wJ-HPhNCPxvhybXfjRb6WJW95hmtvVlIr1fFDYxxsrXwLF7-iatvw4lU8ANq5OZuaj0rHwhMx2CCypeqvNHGzkw">
+</div>
+</div>
+</div>
+<!-- PHASE 04 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">4</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 04: ESSENTIALS</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">The 'Before Your Trip' feature takes the guesswork out of packing. By checking seasonal weather trends, the app suggests exactly what to bring, so you won't find yourself carrying a heavy sweater in the middle of summer. Plus, the integrated checklist lets you track your essentials as you pack.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<img alt="WanderBloom Packing Tips" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD6BecMP13OeBD6PApVJZIxTHOYPdFERuT9yPrcKoL_iRkD7IraO0qTdOijgu8c_JzAWlvFg_geSfM0rOZjLxKOa97xFuL5amlkFh-G_4RaVPq1uA1yfhDDlLf-kXkAp5uj92euExOf2SR7nYSiis1nWEX114dYzTsvaGWXkskkIwqnEhM_F95aOuJoVTsGdzWmccaMzVnj36CCEpKMXbhXOnm50xahtT-ZiP-e8RQ0jaX8_aNUEztFhAijaFDtolbE41HPtm-ZGY">
+<img alt="WanderBloom Checklist UI" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByddGOYjJBlC7LlRvXsO97JP-Rta4EioJjDg-wtrQjJABAtZaJCAbN6vrTTdX6AHuBCtyNT9l64_3k3Xrwwxd7I_B92ZcfUwQ05NO67hRP10lmyCylLk1dOs1jEfv-CApX3SMl35kRJANDDqUX_O0I3U7x9hAENh627qG77p70Dz1vi3DG48bACRnVqxHo_4fi9jJOtOOA4U2EMf2lCC1G2WJE8Lgu9bIHFea5NQkNR7U6EytNdv_U5U8UFQl995nAwtlxryusKIQ">
+</div>
+</div>
+</div>
+<!-- PHASE 05 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">5</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 05: JOURNALING &amp; CALENDAR</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">Journaling is a key part of the travel experience. Every entry you make is represented by a cherry blossom on your calendar, creating a beautiful visual history of your journey. I'm continuing to refine this feature to make it even more intuitive.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<img alt="WanderBloom Diary Entry" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuRpkADgLfxT0KaY1XDPkIDhAuJJeF7pi_a7rjA0-hSSHLX4hndnmbKE9-U-X4JADSLLGpsm2sODDZKbLG0czH5h64RAkjsq_x9Bcwi7V4D0IxA46nxM-CZizFeCNuOziqiQl-poGjblcTub-aNKOjjQe88MU9xkYOY0bSZmIAqhVxFB3pfAMlylj_ajLyB3JpIieGLTqs6Rve5CP4MmfpNuDz1fmglAik-EnC4UGAWqg-qMNS_n8ZnWlTwz8tfmAUwupuZDpcj2o">
+<img alt="WanderBloom Journal Flow" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARiznm0CegwLIsxCyvUQzI-nlG_DwJ8l-ag5Pui3o2pxPfbOifivbFvu0IzIPAhpX69FIarKyHDTbVD3jBJ_NO1XYfqJp8w7h9k5mbwviwGRbONhaO1BLiYBjmp0Oknk6wR7LsO2EmoUY70L-rmJ1Hoj7jEp91icoibSH3dNipAqX19lCBlhUAgrodZNU5uAtY9gyjoORIFhBEc8CxJ_LQwuE3VfWSDZyk0eMMVUs6-daz2fvHCOrV8DL3hbcOOOx-f5KUYWSYWyk">
+<img alt="WanderBloom Calendar UI" class="rounded-xl overflow-hidden border border-border-low shadow-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqx8IyU_SbD2H0AuSp2HfmRmW1tJ-_WSCMxg4-eltaLm146fAmLagdvWlAztrl4FqxHhbDS-C0vhBf_j6sAoT5qgtM1E0EeeVVTutgu6RAPPd_C6kEAeyChlhb3LlwBmcsQGEehKKAElfGK1en01QcHE4G5FIlqK8hM-gCAv5cQtBlFEetRRtsAJuFco3RnMEeaWyxHHBejTgdYzQChmYpVO4CshOGKZfZa_PM2hIj4mu94teDeahZRvLydVvcIjUHQkGV_zf1W7o">
+</div>
+</div>
+</div>
+<!-- PHASE 06 -->
+<div class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">6</div>
+<div class="space-y-6 flex-grow">
+<h4 class="font-section-header text-2xl text-on-surface uppercase tracking-widest">PHASE 06: AI PERSONALIZATION ENGINE</h4>
+<p class="text-lead-text text-on-surface-variant leading-relaxed">While the UI is still in development, I'm planning an AI assistant to help navigate complex local transit. In places like the Philippines, where choosing between a cab, jeepney, or tricycle can be tricky, this assistant will act as your local guide to find the best way around.</p>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="max-w-container-default mx-auto px-margin-page mb-stack-lg">
+<div class="bg-surface-primary rounded-[1.5rem] border border-border-low p-8 md:p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">terminal</span>
+</div>
+<h3 class="font-section-header text-3xl text-on-surface mb-8">The Technical Foundation</h3>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-stack-md">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase">Core</span>
+<p class="text-on-surface font-semibold">SwiftUI</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase">Intelligence</span>
+<p class="text-on-surface font-semibold">AI / LLM</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase">Environment</span>
+<p class="text-on-surface font-semibold">Weather API</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase">Location</span>
+<p class="text-on-surface font-semibold">Maps</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase">Backend</span>
+<p class="text-on-surface font-semibold">Firebase</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-border-low w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-page max-w-container-wide mx-auto gap-gutter">
+<div class="font-editorial-serif text-editorial-serif text-on-surface mb-4 md:mb-0">Jennifer Bentulan</div>
+<p class="font-body-base text-caption-xs text-text-muted text-center md:text-left">© 2026 JenB. Built with precision and a lot of espresso.</p>
+<div class="flex gap-6">
+<a class="text-text-muted hover:text-secondary-fixed-dim transition-colors" href="#">Email</a>
+<a class="text-text-muted hover:text-secondary-fixed-dim transition-colors" href="#">GitHub</a>
+
+
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroText = document.querySelector('h1');
+            if(heroText) {
+                heroText.style.transform = `translateY(${scrolled * 0.15}px)`;
+                heroText.style.opacity = 1 - (scrolled / 500);
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body></html>
