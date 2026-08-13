@@ -175,6 +175,7 @@ h3 { font-family: var(--pixel); font-size: clamp(.92rem, 1.5vw, 1.2rem); line-he
 .device-tabs button { flex: 1; padding: 1rem; color: rgba(255,245,216,.7); background: rgba(0,0,0,.25); border: 1px solid var(--border); cursor: pointer; }
 .device-tabs button[aria-selected="true"] { color: var(--ink); background: var(--gold); font-weight: 700; }
 .device-panel { display: grid; gap: 2rem; }
+.device-panel { scroll-margin-top: 88px; }
 .device-step { display: grid; grid-template-columns: minmax(240px,.8fr) 1.2fr; align-items: center; gap: clamp(1.5rem,5vw,5rem); padding-bottom: 2rem; border-bottom: 1px dashed rgba(255,255,255,.15); }
 .device-step:nth-child(even) figure { order: 2; }
 .device-step figure { margin: 0; }

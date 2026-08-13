@@ -17,6 +17,8 @@ const tabs = [...document.querySelectorAll('[role="tab"]')];
 const panels = [...document.querySelectorAll('[role="tabpanel"]')];
 
 function activateTab(tab) {
+  const targetPanelId = tab.getAttribute('aria-controls');
+
   tabs.forEach((item) => {
     const selected = item === tab;
     item.setAttribute('aria-selected', String(selected));
@@ -24,7 +26,12 @@ function activateTab(tab) {
   });
 
   panels.forEach((panel) => {
-    panel.hidden = panel.id !== tab.getAttribute('aria-controls');
+    panel.hidden = panel.id !== targetPanelId;
+  });
+
+  const targetPanel = document.getElementById(targetPanelId);
+  requestAnimationFrame(() => {
+    targetPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 }
 
