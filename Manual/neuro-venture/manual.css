@@ -169,6 +169,16 @@ h3 { font-family: var(--pixel); font-size: clamp(.92rem, 1.5vw, 1.2rem); line-he
 .device-comparison { display: grid; grid-template-columns: .7fr 1.3fr; gap: 2rem; align-items: center; margin: 3rem 0; }
 .tip-gold { border-color: var(--gold); background: rgba(245,197,66,.1); }
 .tip-gold span { color: var(--gold); }
+.widget-showcase { display: grid; grid-template-columns: .72fr 1.15fr 1.4fr; gap: 1rem; align-items: end; margin: 3rem 0; }
+.widget-card { margin: 0; min-width: 0; padding: 1rem; border: 1px solid var(--border); background: linear-gradient(145deg, rgba(18,57,35,.78), rgba(5,21,16,.9)); box-shadow: var(--shadow); }
+.widget-card img { width: 100%; height: auto; object-fit: contain; }
+.widget-card figcaption { display: grid; gap: .25rem; padding-top: .8rem; }
+.widget-card figcaption strong { color: var(--gold); font-family: var(--pixel); font-size: .67rem; line-height: 1.6; }
+.widget-card figcaption span { color: rgba(255,245,216,.62); font-size: .72rem; }
+.widget-features { margin: 2rem 0 4rem; }
+.widget-features .resource-glyph { color: var(--lime); }
+.widget-setup { align-items: stretch; grid-template-columns: repeat(2,1fr); }
+.health-widget { align-self: center; }
 
 .device-guides { width: 100%; padding-inline: max(1rem, calc((100% - 1180px)/2)); background: rgba(7,24,19,.75); border-block: 1px solid rgba(245,197,66,.18); }
 .device-tabs { display: flex; gap: .6rem; margin-bottom: 2rem; }
@@ -225,6 +235,7 @@ footer p { margin: 0; } footer span { color: var(--gold); }
   .chapter-marker { gap: .7rem; }
   .chapter-marker > span { font-size: 2.3rem; }
   .resource-grid, .device-comparison, .tips-grid, .support-links { grid-template-columns: 1fr; }
+  .widget-showcase, .widget-setup { grid-template-columns: 1fr; }
   .status-panel { display: block; }
   .status-icon { width: 46px; margin-bottom: 1.4rem; }
   .device-step { grid-template-columns: 1fr; }
