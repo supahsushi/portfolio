@@ -228,6 +228,131 @@
 </div>
 <img alt="Mimi AI screen" class="rounded-xl border border-low shadow-2xl max-w-full h-auto" src="Mimi Ai.png">
 </div>
+<div class="mt-8">
+<p class="font-lead-text text-secondary opacity-90 mb-4">Mimi's brain lives as a Supabase Edge Function, not client-side Swift, so the OpenRouter API key never ships inside the app bundle at all &mdash; it's pulled from a server-side environment secret. This is the actual deployed source, safety guardrails and all.</p>
+<div class="rounded-xl overflow-hidden border border-low shadow-2xl bg-[#0d0d0d]">
+<div class="flex items-center gap-2 px-4 py-3 bg-[#1c1c1c] border-b border-low">
+<div class="flex gap-2">
+<span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+<span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+<span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+</div>
+<span class="ml-2 font-caption-xs text-text-muted">mimi-chat/index.ts &mdash; supabase functions deploy</span>
+</div>
+<pre class="p-6 overflow-x-auto text-sm leading-relaxed m-0"><code class="font-mono text-[#7ee787]">const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+}
+
+const qwenModel = "qwen/qwen-2.5-7b-instruct"
+
+const systemPrompt =
+  "You are Mimi Ai, GlucoMood's caring AI diabetes companion and personal diabetes coach. You are available whenever the user wants support, encouragement, education, help understanding logged information, or someone supportive to talk to about living with diabetes. Speak like a warm, patient, positive, nonjudgmental best friend who genuinely cares about the user's wellbeing. You can celebrate progress, help users stay motivated, and explain general diabetes concepts, glucose patterns, lifestyle habits, exercise, food choices, and feelings associated with glucose changes. You are not a doctor and not a replacement for professional medical care. Do not diagnose conditions, prescribe treatment, change medications, or tell users how much insulin or medication to take. If the user describes potentially dangerous readings or serious symptoms such as chest pain, fainting, confusion, seizure, trouble breathing, feeling unsafe, or a medical emergency, encourage urgent medical care or emergency help right away. Do not be sexual, erotic, explicit, or flirtatious. Keep replies conversational, supportive, and practical."
+
+type MimiRequest = {
+  message: string
+  glucoseState?: "low" | "normal" | "caution" | "high"
+  glucoseValue?: number
+  trend?: "rising" | "flat" | "falling"
+  history?: Array&lt;{
+    role: "user" | "assistant"
+    text: string
+  }&gt;
+}
+
+Deno.serve(async (request) =&gt; {
+  if (request.method === "OPTIONS") {
+    return new Response("ok", { headers: corsHeaders })
+  }
+
+  if (request.method !== "POST") {
+    return jsonResponse({ error: "Method not allowed" }, 405)
+  }
+
+  const openRouterKey = Deno.env.get("OPENROUTER_API_KEY")
+  if (!openRouterKey) {
+    return jsonResponse({ error: "Missing OPENROUTER_API_KEY secret" }, 500)
+  }
+
+  let body: MimiRequest
+  try {
+    body = await request.json()
+  } catch {
+    return jsonResponse({ error: "Invalid JSON body" }, 400)
+  }
+
+  const message = body.message?.trim()
+  if (!message) {
+    return jsonResponse({ error: "Message is required" }, 400)
+  }
+
+  const promptContext = [
+    body.glucoseState ? `Glucose state: ${body.glucoseState}` : null,
+    typeof body.glucoseValue === "number" ? `Glucose value: ${body.glucoseValue} mg/dL` : null,
+    body.trend ? `Trend: ${body.trend}` : null,
+  ]
+    .filter(Boolean)
+    .join("\n")
+
+  const messages = [
+    { role: "system", content: systemPrompt },
+    ...(body.history ?? []).map((entry) =&gt; ({
+      role: entry.role === "assistant" ? "assistant" : "user",
+      content: entry.text,
+    })),
+    {
+      role: "user",
+      content: [promptContext, `User says: ${message}`].filter(Boolean).join("\n\n"),
+    },
+  ]
+
+  const openRouterResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${openRouterKey}`,
+    },
+    body: JSON.stringify({
+      model: qwenModel,
+      messages,
+      max_tokens: 300,
+      temperature: 0.85,
+    }),
+  })
+
+  const data = await openRouterResponse.json()
+
+  if (!openRouterResponse.ok) {
+    return jsonResponse(
+      {
+        error: "OpenRouter request failed",
+        details: data?.error?.message ?? JSON.stringify(data),
+      },
+      502,
+    )
+  }
+
+  const reply = data?.choices?.[0]?.message?.content?.trim() ?? ""
+
+  if (!reply) {
+    return jsonResponse({ error: "OpenRouter returned an empty response" }, 502)
+  }
+
+  return jsonResponse({ reply })
+})
+
+function jsonResponse(payload: unknown, status = 200) {
+  return new Response(JSON.stringify(payload), {
+    status,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json",
+    },
+  })
+}</code></pre>
+</div>
+</div>
 </div>
 <!-- Step 7 -->
 <div class="relative">
