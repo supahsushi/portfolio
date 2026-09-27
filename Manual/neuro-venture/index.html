@@ -26,6 +26,7 @@
       <a href="#habits">Habits</a>
       <a href="#widgets">Widgets</a>
       <a href="#xp-gold">XP &amp; Gold</a>
+      <a href="#streaks-badges">Badges</a>
       <a href="#exhaustion">Hero Exhaustion</a>
       <a href="#rewards">Rewards</a>
       <a href="#faq">FAQ</a>
@@ -187,8 +188,8 @@
           <figcaption><strong>Small · Daily XP</strong><span>See Daily XP, progress, and Gold in one compact tile.</span></figcaption>
         </figure>
         <figure class="widget-card widget-medium">
-          <img src="assets/widgets/morning-quest-medium.png" alt="Medium Neuro Venture Morning Quest widget showing step progress and quest rewards" loading="lazy">
-          <figcaption><strong>Medium · Morning Quest</strong><span>Follow a Health-connected step quest and its XP and Gold reward.</span></figcaption>
+          <img src="assets/widgets/morning-quest-medium.png" alt="Medium Neuro Venture Daily Quest widget showing step progress and quest rewards" loading="lazy">
+          <figcaption><strong>Medium · Daily Quest</strong><span>Follow a Health-connected step quest and its XP and Gold reward.</span></figcaption>
         </figure>
         <figure class="widget-card widget-large">
           <img src="assets/widgets/todays-quests-large.png" alt="Large Neuro Venture Today's Quests widget showing three starter quests" loading="lazy">
@@ -197,7 +198,7 @@
       </div>
 
       <div class="resource-grid widget-features">
-        <article class="resource-card"><span class="resource-glyph">XP</span><h3>Live Progress</h3><p>Depending on size and current activity, widgets can show Daily XP, Gold, active quests, the next quest, Apple Health steps, or a running focus countdown.</p></article>
+        <article class="resource-card"><span class="resource-glyph">XP</span><h3>Live Progress</h3><p>Depending on size and current activity, widgets can show Daily XP, Gold, active quests, the next quest, supported Apple Health progress, or a running focus countdown.</p></article>
         <article class="resource-card"><span class="resource-glyph">⌛</span><h3>Dynamic Updates</h3><p>Neuro Venture sends fresh snapshots when app progress changes. iOS and iPadOS also refresh widget timelines automatically; exact refresh timing is managed by the system.</p></article>
       </div>
 
@@ -226,18 +227,19 @@
       <div class="chapter-marker"><span>04</span><div><p class="eyebrow">Real-World Quest Data</p><h2>Apple Health</h2></div></div>
       <div class="subchapter">
         <div class="copy-panel">
-          <h3>Turn Steps Into Progress</h3>
-          <p>Connect Apple Health from Profile to let Neuro Venture read today's step count. A Health-connected Morning Quest widget can show real progress such as <strong>4,850 / 6,000 steps</strong>.</p>
+          <h3>Turn Health Activity Into Quest Progress</h3>
+          <p>Connect Apple Health from Profile to let Neuro Venture use supported Health results for real-world quests. Verified Health quest types include <strong>Steps</strong>, <strong>Walking / Running Distance</strong>, <strong>Workouts / Exercise Activity</strong>, and <strong>Workout / Exercise Duration</strong>.</p>
+          <p>The existing Health-connected Daily Quest widget remains a Steps example and can show progress such as <strong>4,850 / 6,000 steps</strong>.</p>
           <ul class="rune-list">
             <li>Open Profile and choose Connect Apple Health.</li>
-            <li>Allow Neuro Venture to read Steps.</li>
-            <li>Use Refresh Steps when you want to request the latest result in the app.</li>
-            <li>Change the step goal to match your real-life adventure.</li>
+            <li>Allow only the supported Health data types you want Neuro Venture to read.</li>
+            <li>Create or follow a supported Health quest and review its latest progress.</li>
+            <li>Check completed Health quests in Profile after the goal is reached.</li>
           </ul>
-          <p class="fine-print">The current Apple Health integration reads step count only. Health permission is optional, and Apple Health remains the source of the displayed step data.</p>
+          <p class="fine-print">Health access is optional and controlled by Apple Health permissions. If access is denied or a supported data type is unavailable, Neuro Venture still works without Health-based progress. No other Health data types are currently documented as supported.</p>
         </div>
         <figure class="widget-card health-widget">
-          <img src="assets/widgets/morning-quest-medium.png" alt="Morning Quest widget showing 3,420 of 6,000 steps" loading="lazy">
+          <img src="assets/widgets/morning-quest-medium.png" alt="Daily Quest widget showing 3,420 of 6,000 steps" loading="lazy">
           <figcaption><strong>Your real steps, your quest progress</strong><span>The meter changes as the step snapshot is refreshed.</span></figcaption>
         </figure>
       </div>
@@ -247,7 +249,7 @@
       <div class="chapter-marker"><span>05</span><div><p class="eyebrow">Adventure Currency</p><h2>XP &amp; Gold</h2></div></div>
       <div class="resource-grid">
         <article class="resource-card xp-card"><span class="resource-glyph">XP</span><h3>Experience Points</h3><p>XP records your progress and helps your adventurer grow. Complete quests and habits to fill the Daily XP bar.</p></article>
-        <article class="resource-card gold-card"><span class="resource-glyph">●</span><h3>Gold</h3><p>Gold is your reward currency. Save it and spend it on available outfits, skins, and other rewards.</p></article>
+        <article class="resource-card gold-card"><span class="resource-glyph">●</span><h3>Gold</h3><p>Gold is Neuro Venture's fictional in-game reward currency. Save it and spend it on available outfits, skins, and other rewards. Gold is not real money, has no cash value, and cannot be purchased.</p></article>
       </div>
       <div class="tip"><span>⚔</span><p><strong>Remember:</strong> Difficulty sets the base reward. Premium status may change the amount shown in the app.</p></div>
       <div class="status-panel pending">
@@ -262,8 +264,91 @@
       </div>
     </section>
 
+    <section id="premium" class="chapter content-chapter premium-chapter">
+      <div class="section-heading"><p class="eyebrow">Permanent Adventure Upgrade</p><h2>Premium — Unlock More of Your Adventure</h2><p>Expand your productivity toolkit and open a larger vault of optional RPG customization.</p></div>
+      <div class="premium-showcase">
+        <figure class="premium-visual">
+          <img src="assets/premium/premium-additions.png" alt="Neuro Venture Premium promotional showcase featuring example outfits, armor, familiars, and productivity perks" loading="lazy">
+          <figcaption>Visual showcase · Illustrated rewards are examples, not a guarantee that every item is currently available.</figcaption>
+        </figure>
+        <div class="copy-panel premium-copy">
+          <p class="status-label">Premium Adventurer</p>
+          <h3>Premium — $4.99 Lifetime</h3>
+          <p class="premium-purchase"><strong>One-time purchase. No subscription.</strong></p>
+          <h4>Premium includes</h4>
+          <ul class="rune-list">
+            <li>Unlimited tasks</li>
+            <li>Expanded or unlimited notification access where currently supported</li>
+            <li>Multiple focus timers</li>
+            <li>Full widget collection</li>
+            <li>2× XP and Gold</li>
+            <li>Extra armors, outfits, and weapons</li>
+            <li>Premium pets and familiars that can accompany your Hero</li>
+            <li>Additional customization and premium content</li>
+          </ul>
+          <div class="premium-examples">
+            <h4>Example outfits &amp; armor</h4>
+            <p>Android Prototype, Dragon Rider, Phantom Assassin, Hacker God, Street King, and Quantum Hacker.</p>
+            <h4>Example familiars &amp; companions</h4>
+            <p>Cerberus, Direwolf, Wampuscat, Lion, Owl, Small Dragon, Middle Dragon, Large Dragon, Unicorn, Catboy &amp; Girl, Cyberhacker, Mage Scholar, Pixel Gamer, and VR Suit.</p>
+          </div>
+          <p class="fine-print"><strong>Cosmetic showcase:</strong> These names are examples of Premium cosmetic and reward content. Available items may vary as Neuro Venture is updated.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="streaks-badges" class="chapter content-chapter badges-chapter">
+      <div class="chapter-marker"><span>06</span><div><p class="eyebrow">Hall of Heroes</p><h2>Streaks &amp; Badges</h2></div></div>
+      <div class="resource-grid">
+        <article class="resource-card"><span class="resource-glyph">🔥</span><h3>Daily Streak</h3><p>Complete at least one quest or habit each day to grow your streak. Your current streak appears on the Home screen. Tap it to see your best streak so far.</p></article>
+        <article class="resource-card"><span class="resource-glyph">❄️</span><h3>Streak Freeze</h3><p>Life happens. Spend <strong>40 Gold</strong> on a Streak Freeze to protect your streak. You can hold up to <strong>2</strong>. If you miss a day, a freeze is used automatically and your streak continues when you complete your next task.</p></article>
+      </div>
+      <div class="tip"><span>⚔</span><p><strong>Badges are forever.</strong> Once you earn a badge it stays unlocked, even if a streak ends later. Your highest streak badge is displayed next to your hero on the Home screen. Find all 25 badges in <strong>Profile → Badges</strong>.</p></div>
+
+      <div class="badge-group">
+        <h3>Streak Badges</h3>
+        <div class="badge-grid">
+          <figure class="badge-tile"><img src="assets/badges/streak-3.webp" alt="Spark badge" loading="lazy"><figcaption><strong>Spark</strong><span>3-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-7.webp" alt="Week Warrior badge" loading="lazy"><figcaption><strong>Week Warrior</strong><span>7-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-14.webp" alt="Fortnight Fighter badge" loading="lazy"><figcaption><strong>Fortnight Fighter</strong><span>14-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-21.webp" alt="Habit Formed badge" loading="lazy"><figcaption><strong>Habit Formed</strong><span>21-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-30.webp" alt="Unstoppable badge" loading="lazy"><figcaption><strong>Unstoppable</strong><span>30-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-50.webp" alt="Half-Century badge" loading="lazy"><figcaption><strong>Half-Century</strong><span>50-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-60.webp" alt="Diamond Blaze badge" loading="lazy"><figcaption><strong>Diamond Blaze</strong><span>60-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-100.webp" alt="Eternal Flame badge" loading="lazy"><figcaption><strong>Eternal Flame</strong><span>100-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-200.webp" alt="Ironclad badge" loading="lazy"><figcaption><strong>Ironclad</strong><span>200-day streak</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/streak-365.webp" alt="Year of Fire badge" loading="lazy"><figcaption><strong>Year of Fire</strong><span>365-day streak</span></figcaption></figure>
+        </div>
+      </div>
+      <div class="badge-group">
+        <h3>Quest Badges</h3>
+        <div class="badge-grid">
+          <figure class="badge-tile"><img src="assets/badges/tasks-1.webp" alt="First Quest badge" loading="lazy"><figcaption><strong>First Quest</strong><span>Complete your first task</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/tasks-10.webp" alt="Apprentice badge" loading="lazy"><figcaption><strong>Apprentice</strong><span>Complete 10 tasks</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/tasks-50.webp" alt="Veteran badge" loading="lazy"><figcaption><strong>Veteran</strong><span>Complete 50 tasks</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/tasks-100.webp" alt="Centurion badge" loading="lazy"><figcaption><strong>Centurion</strong><span>Complete 100 tasks</span></figcaption></figure>
+          <figure class="badge-tile"><img src="assets/badges/tasks-500.webp" alt="Legend badge" loading="lazy"><figcaption><strong>Legend</strong><span>Complete 500 tasks</span></figcaption></figure>
+        </div>
+      </div>
+      <div class="badge-group">
+        <h3>Level, Treasure &amp; Daily Badges</h3>
+        <div class="badge-grid">
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">📈</span><figcaption><strong>Rising Hero</strong><span>Reach level 5</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">🎖️</span><figcaption><strong>Seasoned</strong><span>Reach level 10</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">💎</span><figcaption><strong>Elite</strong><span>Reach level 25</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">🌌</span><figcaption><strong>Mythic</strong><span>Reach level 50</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">🪙</span><figcaption><strong>Coin Collector</strong><span>Hold 100 gold</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">💰</span><figcaption><strong>Treasure Hunter</strong><span>Hold 500 gold</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">🎁</span><figcaption><strong>Style Upgrade</strong><span>Unlock your first reward</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">👗</span><figcaption><strong>Wardrobe</strong><span>Unlock 3 rewards</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">✅</span><figcaption><strong>Perfect Day</strong><span>Reach 100 XP in one day</span></figcaption></figure>
+          <figure class="badge-tile badge-emoji"><span aria-hidden="true">🌈</span><figcaption><strong>Perfect Week</strong><span>Have 7 perfect days</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
     <section id="exhaustion" class="chapter content-chapter exhaustion-chapter">
-      <div class="chapter-marker"><span>06</span><div><p class="eyebrow">Stamina Warning</p><h2>Hero Exhaustion</h2></div></div>
+      <div class="chapter-marker"><span>07</span><div><p class="eyebrow">Stamina Warning</p><h2>Hero Exhaustion</h2></div></div>
       <div class="status-panel danger">
         <span class="status-icon crossed-swords">⚔</span>
         <div><p class="status-label">Daily Reward Limit Reached</p><h3>Your hero needs rest.</h3><p>Neuro Venture rewards the first 10 tasks you complete each day. After the 10th rewarded completion, your hero becomes exhausted and additional XP and Gold rewards pause until the next day.</p><p>You can still complete tasks while your hero is exhausted. This limit keeps progression balanced and prevents unlimited reward farming. The existing 100 XP daily cap remains part of your Daily XP progress.</p></div>
@@ -282,7 +367,7 @@
     </section>
 
     <section id="rewards" class="chapter content-chapter">
-      <div class="chapter-marker"><span>07</span><div><p class="eyebrow">Treasure Vault</p><h2>Rewards &amp; Skins</h2></div></div>
+      <div class="chapter-marker"><span>08</span><div><p class="eyebrow">Treasure Vault</p><h2>Rewards &amp; Skins</h2></div></div>
       <div class="subchapter reverse">
         <div class="copy-panel">
           <h3>Spend Your Gold</h3>
@@ -304,7 +389,7 @@
       <div class="section-heading"><p class="eyebrow">Platform Field Guides</p><h2>Choose Your Device</h2><p>Each guide uses screenshots from that device only, so every instruction matches the layout in your hands.</p></div>
       <div class="device-tabs" role="tablist" aria-label="Device tutorials">
         <button id="iphone-tab" role="tab" aria-selected="true" aria-controls="iphone-guide">iPhone Version</button>
-        <button id="ipad-tab" role="tab" aria-selected="false" aria-controls="ipad-guide" tabindex="-1">iPad Version</button>
+        <button id="ipad-tab" role="tab" aria-selected="false" aria-controls="ipad-guide" tabindex="-1">iPad Version · Portrait Only</button>
       </div>
 
       <div id="iphone-guide" class="device-panel" role="tabpanel" aria-labelledby="iphone-tab">
@@ -317,6 +402,10 @@
       </div>
 
       <div id="ipad-guide" class="device-panel" role="tabpanel" aria-labelledby="ipad-tab" hidden>
+        <aside class="status-panel pending" aria-label="iPad orientation compatibility">
+          <span class="status-icon" aria-hidden="true">↕</span>
+          <div><p class="status-label">iPad Support</p><h3>Portrait Orientation</h3><p>Neuro Venture currently supports Portrait orientation on iPad.</p><p>Landscape support is coming soon.</p></div>
+        </aside>
         <article class="device-step"><figure><img src="assets/ipad-pro-13/home.png" alt="Neuro Venture Home screen on iPad" loading="lazy"></figure><div><span>iPad · 01</span><h3>Begin on Home</h3><p>Choose your task, add it to the panel, and start the quest from the spacious iPad Home layout.</p></div></article>
         <article class="device-step"><figure><img src="assets/ipad-pro-13/reminder.png" alt="New Reminder screen on iPad" loading="lazy"></figure><div><span>iPad · 02</span><h3>Plan a Reminder</h3><p>Add details, choose a difficulty, and set a schedule using the iPad reminder sheet.</p></div></article>
         <article class="device-step"><figure><img src="assets/ipad-pro-13/focus-timer.png" alt="Start Focus duration picker and active countdown on iPad" loading="lazy"></figure><div><span>iPad · 03</span><h3>Choose Your Focus Time</h3><p>Select a suggested or custom duration, then follow the in-app countdown and supported Live Activity. iPad does not use Dynamic Island.</p></div></article>
@@ -343,15 +432,19 @@
         <details><summary>Why didn't I earn XP or Gold?</summary><p>Your hero may already have earned rewards from 10 completed tasks today. After the 10th rewarded completion, XP and Gold pause until the next day, but you can still complete tasks.</p></details>
         <details><summary>Why is my hero exhausted?</summary><p>Your hero earns rewards from up to 10 completed tasks per day. After the 10th rewarded completion, exhaustion begins to keep progression balanced. This is separate from the Free plan capacity of 8 active tasks.</p></details>
         <details><summary>What is the Free Adventurer task limit?</summary><p>Free users can have up to 8 active tasks at one time. This is a capacity limit. Hero Exhaustion is different: it begins after 10 rewarded task completions in a day.</p></details>
+        <details><summary>What does Premium include?</summary><p>Premium is a $4.99 lifetime one-time purchase that unlocks additional productivity features and premium game content, including multiple focus timers, the full widget collection, 2× XP and Gold, expanded notifications, special armor and outfits, and exclusive familiars.</p></details>
         <details><summary>How do I change difficulty?</summary><p>Open the full Add Reminder screen and choose Easy, Medium, or Hard before adding the quest.</p></details>
         <details><summary>How do I schedule a reminder?</summary><p>Tap the calendar button on Home, turn on Set due date &amp; time, then select the date, time, and optional repeat schedule.</p></details>
         <details><summary>How do I enable notifications?</summary><p>Allow notifications in iOS Settings and enable the notification option when scheduling an eligible quest. Notification features may require Premium.</p></details>
         <details><summary>How do I snooze a notification?</summary><p>Press and hold the quest reminder notification to reveal its actions, then choose Snooze 10 min. Notification presentation can vary by iOS or iPadOS version and device settings.</p></details>
         <details><summary>How do I start a focus timer?</summary><p>Open an active quest and tap its timer control. Choose a suggested duration or Custom, then tap Start. The countdown remains tied to that quest.</p></details>
         <details><summary>How do I add a Neuro Venture widget?</summary><p>Touch and hold the Home Screen, open Add Widget, search for Neuro Venture, choose Small, Medium, or Large, and place it on your Home Screen.</p></details>
-        <details><summary>Why isn't my widget showing the latest progress?</summary><p>Open Neuro Venture to publish the newest quest snapshot. Widget refresh timing is also managed by iOS or iPadOS, so an update may not appear immediately.</p></details>
-        <details><summary>How do I connect Apple Health?</summary><p>Open Profile, choose Connect Apple Health, and allow read access to Steps. The current Health integration uses today's step count and your selected step goal.</p></details>
+        <details><summary>Why hasn't my widget updated yet?</summary><p>Open Neuro Venture to publish the newest quest snapshot. Widget refresh timing is also managed by iOS or iPadOS, so changes may not appear immediately.</p></details>
+        <details><summary>Does Neuro Venture have an Apple Watch app?</summary><p>Not yet. However, Neuro Venture notifications may still appear on your Apple Watch through iPhone notification mirroring. A dedicated Apple Watch app is not currently required for mirrored notifications.</p></details>
+        <details><summary>How do I connect Apple Health?</summary><p>Open Profile, choose Connect Apple Health, and allow access to the supported types you want to use: Steps, Walking / Running Distance, Workouts / Exercise Activity, and Workout / Exercise Duration. Apple Health controls each permission.</p></details>
+        <details><summary>Why isn't my Health quest updating?</summary><p>Check that Apple Health access is enabled for the data type used by the quest and that Apple Health has a matching result. If permission is denied or that data is unavailable, Neuro Venture still works without Health-based progress.</p></details>
         <details><summary>Why isn't Dynamic Island showing?</summary><p>Dynamic Island requires a supported iPhone, an active focus session, and Live Activities enabled in device settings. On iPad, use the in-app countdown and supported Live Activity experience instead; iPad does not have Dynamic Island.</p></details>
+        <details><summary>Does Neuro Venture support landscape mode on iPad?</summary><p>Not yet. Neuro Venture currently supports <strong>Portrait orientation only on iPad</strong>. Landscape support is planned for a future update.</p></details>
       </div>
     </section>
 
