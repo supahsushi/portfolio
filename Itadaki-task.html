@@ -1,0 +1,169 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Itadaki Task | Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#1b1109",
+        primary: "#ffb68c",
+        secondary: "#f8bd41",
+        "primary-container": "#f07820",
+        "on-primary-container": "#552300",
+        "surface-primary": "#221508",
+        "surface-container-low": "#241911",
+        "surface-container-lowest": "#160c05",
+        "surface-container-highest": "#3f3228",
+        "surface-interactive": "#311f10",
+        "on-surface": "#f4ded0",
+        "on-surface-variant": "#dec1b1",
+        "text-muted": "#b09070",
+        "border-low": "#4a3120",
+        "border-high": "#5a3d28"
+      },
+      spacing: {
+        "margin-page": "clamp(2rem, 8vw, 6rem)",
+        "container-default": "960px",
+        "container-wide": "1200px",
+        "gutter": "24px",
+        "stack-lg": "48px",
+        "stack-md": "24px"
+      },
+      fontFamily: {
+        "headline-lg": ["Cabinet Grotesk"],
+        "headline-lg-mobile": ["Cabinet Grotesk"],
+        "section-header": ["Cabinet Grotesk"],
+        "body-base": ["Hanken Grotesk"],
+        "lead-text": ["Hanken Grotesk"],
+        "label-sm": ["Hanken Grotesk"],
+        "editorial-serif": ["Instrument Serif"]
+      },
+      fontSize: {
+        "headline-lg": ["80px", {"lineHeight": "1.1", "fontWeight": "700"}],
+        "headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+        "section-header": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+        "lead-text": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+        "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+        "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+      }
+    }
+  }
+}
+</script>
+<style>
+body{background:#1b1109;color:#f4ded0;-webkit-font-smoothing:antialiased}
+.grain-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;background-image:url("https://www.transparenttextures.com/patterns/pinstriped-suit.png")}
+.material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24}
+.phone-frame{aspect-ratio:9/19;background:#3f3228;border:8px solid #311f10;border-radius:3rem;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.phone-frame img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+</style>
+</head>
+<body class="font-body-base bg-background selection:bg-primary/30 selection:text-primary">
+<div class="grain-overlay"></div>
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-page py-4 bg-background/80 backdrop-blur-md border-b border-border-low">
+<a href="index.html" class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface hover:text-primary transition-colors">Itadaki Task</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="index.html">HOME</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="Love-always.html">LOVE ALWAYS AI</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="Neuro-venture.html">NEURO VENTURE</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold border-b border-primary pb-1" href="Itadaki-task.html">ITADAKI TASK</a>
+<a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="glucomood.html">GLUCOMOOD</a>
+</div>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-opacity" href="JenB-iOS-Developer-Updated.pdf">Resume</a>
+</nav>
+<main class="pt-32 pb-stack-lg">
+<header class="max-w-container-default mx-auto px-margin-page mb-24">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<img alt="Itadaki Task app icon" class="w-28 h-28 md:w-40 md:h-40 rounded-[2rem] border border-border-high shadow-2xl" src="itadaki-icon.png">
+<div class="text-center md:text-left">
+<div class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4">Case Study: Sushi-themed productivity</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">Itadaki Task: turning to-dos into sushi orders</h1>
+<p class="font-lead-text text-lead-text text-text-muted max-w-2xl">A cozy SwiftUI task app where completing a task feels like serving sushi, feeding a customer, unlocking badges, and meeting tiny restaurant regulars.</p>
+</div>
+</div>
+</header>
+
+<section class="max-w-container-default mx-auto px-margin-page mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">The Vision</span>
+<h2 class="font-section-header text-section-header text-on-surface mt-3 mb-6">Productivity that feels warm, not clinical</h2>
+<p class="font-lead-text text-lead-text text-on-surface-variant mb-6">The idea was to build a task app for people who need visual motivation. Instead of a plain checklist, every task becomes an order at a sushi counter. Finishing work feeds the customer, raises your stats, and slowly opens more of the restaurant world.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-5 rounded-2xl bg-surface-primary border border-border-low"><span class="material-symbols-outlined text-secondary">restaurant</span><h3 class="font-bold mt-3">Sushi Metaphor</h3><p class="text-on-surface-variant text-sm mt-2">Tasks become sushi orders with a 10-sushi daily meal limit.</p></div>
+<div class="p-5 rounded-2xl bg-surface-primary border border-border-low"><span class="material-symbols-outlined text-secondary">workspace_premium</span><h3 class="font-bold mt-3">Rewards</h3><p class="text-on-surface-variant text-sm mt-2">Achievements, badges, collection customers, and profile stats.</p></div>
+<div class="p-5 rounded-2xl bg-surface-primary border border-border-low"><span class="material-symbols-outlined text-secondary">notifications_active</span><h3 class="font-bold mt-3">Reminders</h3><p class="text-on-surface-variant text-sm mt-2">Date, repeat, category, and Premium Chef Alarm sounds.</p></div>
+</div>
+</div>
+<div class="md:col-span-5">
+<div class="phone-frame"><img alt="Itadaki Task profile stats screen" src="itadaki-profile.png"></div>
+</div>
+</div>
+</section>
+
+<section class="max-w-container-default mx-auto px-margin-page mb-32">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Task Flow</span>
+<h2 class="font-section-header text-section-header text-on-surface mt-3">Orders, categories, and reminders</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 bg-surface-container-low border border-border-low rounded-2xl">
+<h3 class="text-xl font-bold mb-3">Add a Task</h3>
+<p class="text-on-surface-variant">Users can enter a task title, choose date/time, turn reminders on, set repeat behavior, and categorize tasks like Focus, Self-Care, Fitness, Learning, Social, or Other.</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-border-low rounded-2xl">
+<h3 class="text-xl font-bold mb-3">Orders List</h3>
+<p class="text-on-surface-variant">The Orders board shows open work in a playful wooden panel. Tasks can have scheduled times or appear without one when the user wants a simpler order.</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-border-low rounded-2xl">
+<h3 class="text-xl font-bold mb-3">Daily Limit</h3>
+<p class="text-on-surface-variant">At 10 sushi, the customer is full. The Chef screen switches to a thank-you state and invites the user to come back tomorrow.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+<div class="phone-frame"><img alt="Add Task screen with categories" src="itadaki-add-task.png"></div>
+<div class="phone-frame"><img alt="Orders list with tasks" src="itadaki-orders.png"></div>
+<div class="phone-frame"><img alt="Daily limit customer full screen" src="itadaki-customer-full.png"></div>
+</div>
+</section>
+
+<section class="max-w-container-default mx-auto px-margin-page mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="phone-frame"><img alt="Achievement unlock screen" src="itadaki-achievement.png"></div>
+<div class="phone-frame translate-y-8"><img alt="Collection screen with customers" src="itadaki-collection.png"></div>
+</div>
+<div class="md:col-span-7">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Progress System</span>
+<h2 class="font-section-header text-section-header text-on-surface mt-3 mb-6">Badges, collection customers, and profile stats</h2>
+<p class="font-lead-text text-lead-text text-on-surface-variant mb-6">The app tracks lifetime sushi eaten, daily best, current streak, category completions, achievements, and collection customers. The profile page gives that progress a home, so users can see momentum without digging through settings.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-5 rounded-2xl bg-surface-primary border border-border-low"><h3 class="font-bold">18 badges</h3><p class="text-on-surface-variant text-sm mt-2">Milestones for first task, full plates, streaks, totals, and task categories.</p></div>
+<div class="p-5 rounded-2xl bg-surface-primary border border-border-low"><h3 class="font-bold">13 customers</h3><p class="text-on-surface-variant text-sm mt-2">Unlocked characters make progress feel collectible and personal.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="max-w-container-default mx-auto px-margin-page mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Premium Layer</span>
+<h2 class="font-section-header text-section-header text-on-surface mt-3 mb-6">Chef Alarm sounds from Profile</h2>
+<p class="font-lead-text text-lead-text text-on-surface-variant mb-6">Premium unlocks Chef Alarm choices from the Profile screen. The alarm picker keeps reminders inside the sushi-restaurant world instead of feeling like a generic phone alert.</p>
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-label-sm uppercase tracking-widest" href="https://supahsushi.github.io/itadaki-task-website/" target="_blank">Official Website <span class="material-symbols-outlined text-sm">north_east</span></a>
+</div>
+<div class="md:col-span-5">
+<div class="phone-frame"><img alt="Chef Alarm picker" src="itadaki-chef-alarm.png"></div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
