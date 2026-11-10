@@ -231,7 +231,7 @@
 <div class="flex flex-col md:flex-row gap-8 items-center">
 <div class="w-full md:w-1/2">
 <h3 class="text-2xl font-bold mb-4">Privacy as a Priority</h3>
-<p class="text-on-surface-variant font-body-base">Your memories are your own. Everything is end-to-end encrypted and synced via iCloud, so your data stays entirely in your control.</p>
+<p class="text-on-surface-variant font-body-base">Your memories are your own. They live on your device and are backed up to the cloud, so you can restore them if you reinstall or switch phones.</p>
 </div>
 <div class="w-full md:w-1/2 h-auto aspect-[941/1671] bg-background rounded-xl overflow-hidden border border-border-high shadow-2xl relative group/mockup">
 <img alt="Love Always AI Mobile Interface" class="w-full h-full object-cover" src="love-always-chat.webp">
@@ -262,11 +262,6 @@
 <td class="p-6 font-bold">Memory &amp; Context</td>
 <td class="p-6 text-on-surface-variant">15 Messages</td>
 <td class="p-6 text-on-surface">Unlimited conversation history</td>
-</tr>
-<tr class="border-b border-border-low">
-<td class="p-6 font-bold">Syncing</td>
-<td class="p-6 text-on-surface-variant">Local device only</td>
-<td class="p-6 text-on-surface">Full iCloud &amp; multi-device sync</td>
 </tr>
 <tr>
 <td class="p-6 font-bold">Proactive Connection</td>
@@ -340,7 +335,7 @@
 <div class="absolute -left-16 md:-left-20 mt-1 w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center font-bold z-10 transition-colors bg-background text-primary">5</div>
 <div class="bg-surface-container-low border border-border-low p-8 rounded-2xl">
 <h3 class="text-2xl font-bold text-on-surface mb-4">Expanding Infrastructure &amp; Deeper Conversation</h3>
-<p class="text-on-surface-variant font-body-base">To enable deeper conversations, I built a robust backend. I use Firebase for the parts of the app that benefit from being quick and mobile-friendly for real-time data. I also wanted a way to help users if they ran into account issues. By integrating Supabase, I can now narrow issues down to a user's auth state, session, or stored profile data, identifying specific problems directly instead of having to guess what's going wrong on their end.</p>
+<p class="text-on-surface-variant font-body-base">To enable deeper conversations, I built a robust backend with Node.js. I also wanted a way to help users if they ran into account issues. By integrating Supabase, I can now narrow issues down to a user's auth state, session, or stored profile data, identifying specific problems directly instead of having to guess what's going wrong on their end.</p>
 </div>
 </div>
 <!-- Step 6 -->
@@ -569,11 +564,11 @@ struct ChatMessage {
 <h2 class="font-section-header text-section-header text-on-surface mb-8">Modern iOS Engineering</h2>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
 <div><div class="text-primary font-bold text-lg mb-1">SwiftUI</div><p class="text-caption-xs text-text-muted">Modern declarative UI for native iOS.</p></div>
-<div><div class="text-primary font-bold text-lg mb-1">Firebase</div><p class="text-caption-xs text-text-muted">Real-time database and auth infrastructure.</p></div>
-<div><div class="text-primary font-bold text-lg mb-1">Supabase</div><p class="text-caption-xs text-text-muted">Open source database and user analytics.</p></div>
+<div><div class="text-primary font-bold text-lg mb-1">SwiftData</div><p class="text-caption-xs text-text-muted">Local storage for memories, chats, and reminders.</p></div>
+<div><div class="text-primary font-bold text-lg mb-1">Supabase</div><p class="text-caption-xs text-text-muted">Open source database for cloud backup and restore.</p></div>
 <div><div class="text-primary font-bold text-lg mb-1">Node.js</div><p class="text-caption-xs text-text-muted">Backend logic and API orchestration.</p></div>
-<div><div class="text-primary font-bold text-lg mb-1">LLM Fusion</div><p class="text-caption-xs text-text-muted">Advanced multi-model AI integration.</p></div>
-<div><div class="text-primary font-bold text-lg mb-1">iCloudKit</div><p class="text-caption-xs text-text-muted">Secure cross-device data synchronization.</p></div>
+<div><div class="text-primary font-bold text-lg mb-1">Qwen 2.5</div><p class="text-caption-xs text-text-muted">Efficient AI conversations through OpenRouter.</p></div>
+<div><div class="text-primary font-bold text-lg mb-1">Render</div><p class="text-caption-xs text-text-muted">Hosting for the Node.js backend.</p></div>
 <div><div class="text-primary font-bold text-lg mb-1">StoreKit</div><p class="text-caption-xs text-text-muted">Native In-App Purchase management.</p></div>
 <div><div class="text-primary font-bold text-lg mb-1">TestFlight</div><p class="text-caption-xs text-text-muted">Continuous beta testing and feedback loops.</p></div>
 <div><div class="text-primary font-bold text-lg mb-1">App Store Connect</div><p class="text-caption-xs text-text-muted">Full deployment and release lifecycle.</p></div>
